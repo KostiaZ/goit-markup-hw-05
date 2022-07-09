@@ -22,7 +22,7 @@
                     <li class="nav-menu-item"><a class="link active-page" href="./index.html">Студия</a></li>
                     <li class="nav-menu-item"><a class="link" href="./portfolio.html" target="_parent">Портфолио</a>
                     </li>
-                    <li class="nav-menu-item"><a class="link" href="#">Контакты</a></li>
+                    <li class="nav-menu-item"><a class="link" href="">Контакты</a></li>
                 </ul>
             </nav>
             <ul class="contacts list">
@@ -43,7 +43,7 @@
     <main>
         <section class="section order overlay">
             <h1 class="container order-title">эффективные решения для вашего бизнеса</h1>
-            <button type="button" class="order-button">Заказать услугу</button>
+            <button type="button" class="order-button" data-modal-open>Заказать услугу</button>
         </section>
         <section class="section preferences">
             <div class="container">
@@ -94,10 +94,17 @@
             <div class="container ">
                 <h2 class="title">Чем мы занимаемся</h2>
                 <ul class="what-list list">
-                    <li class="item"><img src="./images/img1.jpg" alt="рабочий стол программиста" width="370" /></li>
-                    <li class="item"><img src="./images/img2.jpg" alt="разработка мобильных приложений" width="370" />
+                    <li class="item"><img class="img" src="./images/img1.jpg" alt="рабочий стол программиста"
+                            width="370" />
+                        <p class="signature">Десктопные приложения</p>
                     </li>
-                    <li class="item"><img src="./images/img3.jpg" alt="работа с цветом" width="370" /></li>
+                    <li class="item"><img class="img" src="./images/img2.jpg" alt="разработка мобильных приложений"
+                            width="370" />
+                        <p class="signature">Мобильные приложения</p>
+                    </li>
+                    <li class="item"><img class="img" src="./images/img3.jpg" alt="работа с цветом" width="370" />
+                        <p class="signature">Дизайнерские решения</p>
+                    </li>
                 </ul>
             </div>
         </section>
@@ -324,6 +331,7 @@
             </div>
         </div>
     </footer>
+    <script src="./js/modal.js"></script>
 </body>
 
 </html>
