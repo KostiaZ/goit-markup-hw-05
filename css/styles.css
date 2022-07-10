@@ -17,6 +17,7 @@
     --border-card: #eeeeee;
     --social-icon: #afb1b8;
     --backdrop: rgba(0, 0, 0, 0.2);
+    --card-overlay: rgba(33, 150, 243, 0.9);
 }
 
 /*-RESET-*/
@@ -170,10 +171,6 @@ body {
     text-decoration: none;
     color: var(--font-p);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s;
 }
 
 .contacts {
@@ -187,12 +184,7 @@ body {
     padding-bottom: 32px;
     text-decoration: none;
     color: var(--font-p);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s;
-}
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);} 
 
 .nav-menu-item + .nav-menu-item{
     margin-left: 50px;
@@ -209,12 +201,7 @@ body {
 .contact-icon {
     margin-right: 10px;
     fill: var(--font-p);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s;
-}
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .contacts .link:hover .contact-icon,
 .contacts .link:focus .contact-icon {
@@ -246,7 +233,7 @@ body {
     background-color: var(--bg-order);
 }
 
-.overlay {
+.order-overlay {
     max-width: 1600px;
     height: 600px;
     margin-left: auto;
@@ -287,15 +274,10 @@ body {
     border-radius: 4px;
     border-color: var(--accent);
     cursor: pointer;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: background-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s;
-}
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);}
 
 .order-button:hover {
-background-color: var(--bg-hover-buton-order);
+    background-color: var(--bg-hover-buton-order);
 }
 
 .backdrop.is-hidden {
@@ -312,11 +294,8 @@ background-color: var(--bg-hover-buton-order);
     height: 100%;
     opacity: 1;
     background-color: var(--backdrop);
-    transition: opacity 2s cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: opacity;
-    transition-duration: 2s;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -327,7 +306,9 @@ background-color: var(--bg-hover-buton-order);
     width: 528px;
     height: 581px;
     background-color: var(--bg-body);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
 }
 
@@ -453,7 +434,9 @@ justify-content: center;
 .our-team .item{
     margin-right: 30px;
     background-color: var(--bg-body);
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+    0px 1px 1px rgba(0, 0, 0, 0.14), 
+    0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
     text-align: center;
 }
@@ -500,11 +483,7 @@ justify-content: center;
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: fill, background-color;
-    transition-duration: 250ms, 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1), cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s, 0s;   
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links .svg:not(:last-child) {
@@ -513,6 +492,7 @@ justify-content: center;
 
 .social-links .icon {
     fill: var(--social-icon);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sli:hover, .sli:focus {
@@ -557,11 +537,7 @@ justify-content: center;
     border: 1px solid var(--social-icon);
     border-radius: 4px;
     cursor: pointer;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: border-color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .company-link:hover,
@@ -577,11 +553,7 @@ justify-content: center;
 
 .icon-client {
     fill: var(--social-icon);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: fill;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*-UI portfolio-*/
@@ -610,13 +582,17 @@ justify-content: center;
     border: 1px transparent;
     border-radius: 4px;
     cursor: pointer;
-    letter-spacing: 0.03em;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .buttons .button:hover, .buttons .button:focus {
     color:var(--font-active-button);
     background-color: var(--accent);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 
+    0px 1px 2px rgba(0, 0, 0, 0.08), 
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 
@@ -631,6 +607,7 @@ justify-content: center;
     width: calc((100% - 60px) / 3);
     margin-right: 30px;
     margin-bottom: 30px;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .filter-list .item:nth-child(3n) {
@@ -670,11 +647,39 @@ justify-content: center;
 }
 
 .filter-list .item:hover, .filter-list .item:focus {
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .filter-list .img{
     display: block;   
+}
+
+.card-overlay {
+    position: relative;
+    overflow: hidden;
+}
+
+.description {
+    position: absolute;
+    top: 101%;
+    left: 0;
+    width: 100%;
+    padding: 63px 24px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.55;    
+    letter-spacing: 0.03em;
+    text-align: left;
+    color: var(--bg-body);
+    background-color: var(--card-overlay);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.filter-list .link:hover .description,
+.filter-list .link:focus .description {
+    transform: translateY(-101%);
 }
 
 /*-footer-*/
@@ -697,10 +702,6 @@ justify-content: center;
 .footer .link{
     text-decoration: none;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    transition-property: color;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-delay: 0s;
 }
 
 .footer-logo {
@@ -782,11 +783,7 @@ justify-content: center;
     border: 0;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        transition-property: background-color;
-        transition-duration: 250ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-delay: 0s;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .sl .icon{
